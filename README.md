@@ -1,13 +1,9 @@
 <p align="left">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200§ion=header&text=Kaushal%20Krishna&fontSize=50&animation=fadeIn&fontAlignY=40&desc=Full-Stack%20Developer%20|%20AI%20Enthusiast%20|%20Building%20the%20Future&descAlignY=65&descAlign=0.7" alt="Profile Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Kaushal%20Krishna&fontSize=50&animation=fadeIn&fontAlignX=50&fontAlignY=40&desc=Full-Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Building%20the%20Future&descAlignY=70&descAlign=50" alt="Profile Banner" />
 </p>
 
 <p align="left">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00FF88&vCenter=true&width=450&lines=Hey+there!+I'm+Kaushal+Krishna;Full-Stack+Wizard;AI+%26+Tech+Trailblazer;Coding+the+Future+with+Passion" alt="Typing SVG" />
-</p>
-
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=kaushalkrishnax&style=flat-square&color=brightgreen&label=Profile+Views" alt="Profile Views" />
 </p>
 
 ---
