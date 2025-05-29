@@ -118,6 +118,9 @@
   <a href="https://github.com/flexiyo/fiyonv">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=fiyonv&theme=radical&hide_border=true&show_owner=true" alt="Flexiyo React Native" />
   </a>
+  <a href="https://github.com/kaushalkrishnax/ytmusic">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=ytmusic&theme=radical&hide_border=true&show_owner=true" alt="YT Music" />
+  </a>
   <a href="https://github.com/flexiyo/fiyogql">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=fiyogql&theme=radical&hide_border=true&show_owner=true" alt="Flexiyo GraphQL" />
   </a>
