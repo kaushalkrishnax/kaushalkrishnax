@@ -88,7 +88,7 @@
 
 <p align="left">
   <a href="https://github.com/kaushalkrishnax/ytmusic">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=kaushalkrishnax&repo=ytmusic&theme=radical&hide_border=true&show_owner=true" alt="YT Music" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=ytmusic&theme=radical&hide_border=true&show_owner=true" alt="YT Music" />
   </a>
   <a href="https://github.com/kaushalkrishnax/interviewer-ai">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=kaushalkrishnax&repo=interviewer-ai&theme=radical&hide_border=true&show_owner=true" alt="Interviewer AI" />
