@@ -124,6 +124,9 @@
   <a href="https://github.com/flexiyo/fiyogql">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=fiyogql&theme=radical&hide_border=true&show_owner=true" alt="Flexiyo GraphQL" />
   </a>
+  <a href="https://github.com/flexiyo/fiyouser">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=fiyouser&theme=radical&hide_border=true&show_owner=true" alt="YT Music" />
+  </a>
   <a href="https://github.com/flexiyo/fiyofeed">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=flexiyo&repo=fiyofeed&theme=radical&hide_border=true&show_owner=true" alt="Flexiyo Feed Service" />
   </a>
