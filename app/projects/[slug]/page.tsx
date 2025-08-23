@@ -351,37 +351,6 @@ export default function Project({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
-
-      {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground font-serif leading-tight">
-              Ready to Build Something
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Amazing?</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Let's discuss how we can create innovative solutions that drive real results for your business.
-              Every great project starts with a conversation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Link href="/contact">
-                <Button size="lg" className="font-semibold px-8 py-4 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  <Star className="mr-2 h-4 w-4" />
-                  Start a Project
-                </Button>
-              </Link>
-              <Link href="/projects">
-                <Button variant="outline" size="lg" className="font-semibold px-8 py-4 bg-background hover:scale-105 transition-all duration-300">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  View More Projects
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
