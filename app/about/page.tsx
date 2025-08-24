@@ -34,6 +34,8 @@ import Link from "next/link"
 import { user } from "@/data/user";
 
 export default function About() {
+  document.title = `${user.name} | About`;
+
   const [activeSkillCategory, setActiveSkillCategory] = useState("Frontend")
   const [isVisible, setIsVisible] = useState(false)
   const [activeTab, setActiveTab] = useState("skills")
@@ -43,7 +45,7 @@ export default function About() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-6">
       {/* Header Section */}
       <section className="py-16 bg-gradient-to-br from-background via-primary/5 to-accent/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>

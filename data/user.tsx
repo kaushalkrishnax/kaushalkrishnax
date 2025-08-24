@@ -208,7 +208,7 @@ interface WorkingProcessStep {
   deliverables: string[];
 }
 
-interface UserData {
+interface User {
   name: string;
   title: string;
   tagline: string;
@@ -275,7 +275,7 @@ interface UserData {
   };
 }
 
-export const user: UserData = {
+export const user: User = {
   name: "Kaushal Krishna",
   title: "Full-Stack • DevOps • AI",
   tagline: "I engineer scalable web systems, AI solutions, and cloud-native applications that power the future of technology.",

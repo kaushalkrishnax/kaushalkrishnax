@@ -4,9 +4,12 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Globe, Bot, Smartphone, Zap, Star, MessageSquare, Github, Search, Eye, Code, Sparkles, ArrowUpRight, Heart } from "lucide-react"
 import Link from "next/link"
+import { user } from "@/data/user"
 import { projectsData } from "@/data/projects"
 
 export default function Projects() {
+  document.title = `${user.name} | Projects`;
+
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const [selectedStatus, setSelectedStatus] = useState<string>("All")
   const [searchTerm, setSearchTerm] = useState<string>("")
@@ -76,9 +79,9 @@ export default function Projects() {
   const stats = getProjectStats()
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-6 overflow-hidden">
       {/* Enhanced Header with Stats */}
-      <section className="py-16 bg-gradient-to-br from-background via-primary/5 to-accent/5 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-background via-primary/5 to-accent/5 relative">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>

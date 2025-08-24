@@ -19,20 +19,20 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: `${user.name} - Portfolio`,
+  title: `${user.name}`,
   description: `${user.name} | Full-Stack Developer, DevOps Engineer & AI Enthusiast building scalable solutions.`,
   metadataBase: new URL("https://kaushalkrishnax.pages.dev"),
   openGraph: {
-    title: `${user.name} - Portfolio`,
+    title: `${user.name}`,
     description: `Explore ${user.name}'s work: Full-Stack, DevOps & AI.`,
     url: "https://kaushalkrishnax.pages.dev",
-    siteName: `${user.name} - Portfolio`,
+    siteName: `${user.name}`,
     images: [
       {
         url: user.avatarUrl,
         width: 400,
         height: 400,
-        alt: `${user.name} - Portfolio`,
+        alt: `${user.name}`,
       },
     ],
     locale: "en_US",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${user.name} - Portfolio`,
+    title: `${user.name}`,
     description: `Explore ${user.name}'s work: Full-Stack, DevOps & AI.`,
     images: [user.avatarUrl],
     creator: "@kaushalkrishnax",
@@ -63,9 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
-      <body className="font-sans">
+      <body className="font-sans overflow-x-none">
         <Navigation />
-        <main className="pt-16">{children}</main>
+        <main className="pt-10">{children}</main>
         <FooterCta />
       </body>
     </html>

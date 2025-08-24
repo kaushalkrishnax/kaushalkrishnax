@@ -50,6 +50,8 @@ import {
 import { user } from "@/data/user";
 
 export default function Contact() {
+  document.title = `${user.name} | Contact`;
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -129,7 +131,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground pt-6">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-background via-primary/5 to-accent/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
