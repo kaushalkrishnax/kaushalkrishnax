@@ -43,8 +43,6 @@ export default function Projects() {
   }
 
   const projects = Object.values(projectsData)
-  const categories = ["All", ...Array.from(new Set(projects.map(p => p.type)))]
-  const statuses = ["All", ...Array.from(new Set(projects.map(p => p.status)))]
 
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
@@ -244,14 +242,14 @@ export default function Projects() {
                     </Link>
 
                     <div className="flex gap-1">
-                      {project.liveUrl && (
+                      {project.liveUrl && project.liveUrl !== "#" && (
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <Button variant="outline" size="sm" className="bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 p-2">
                             <Globe className="h-3 w-3" />
                           </Button>
                         </a>
                       )}
-                      {project.githubUrl && (
+                      {project.githubUrl && project.githubUrl !== "#" && (
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Button variant="outline" size="sm" className="bg-transparent hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 p-2">
                             <Github className="h-3 w-3" />

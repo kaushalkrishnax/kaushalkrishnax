@@ -1,5 +1,3 @@
-import { ExternalLink, Globe, Bot, Smartphone, Zap, Star, MessageSquare, Brain } from "lucide-react";
-
 export const projectsData = {
   "flexiyo": {
     id: "flexiyo",
@@ -165,7 +163,7 @@ export const projectsData = {
     type: "E-commerce Platform",
     gradient: "from-orange-500 to-red-600",
     liveUrl: "https://royalfoodplaza.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kaushalkrishnax/rfp-frontend",
     highlights: [
       "Integrated Razorpay and COD payment systems",
       "Admin dashboard with comprehensive analytics",

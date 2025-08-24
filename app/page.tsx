@@ -55,122 +55,121 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
         <div
-          className="absolute inset-0 opacity-10 transition-all duration-500"
+          className="absolute inset-0 opacity-10 transition-all duration-500 hidden lg:block"
           style={{
-            background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.15), transparent 50%)`,
+            background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59,130,246,0.15), transparent 50%)`,
           }}
         />
-        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse hidden lg:block"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000 hidden lg:block"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-0 py-12 relative z-20">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
             {/* Left Side - Main Content */}
-            <div className={`lg:col-span-7 space-y-8 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}>
-
-              {/* NEW: Title Badge */}
-              <div className="flex justify-center md:justify-start">
-                <Badge variant="outline" className="text-lg font-semibold py-2 px-6 bg-gradient-to-r from-background via-muted/50 to-background border-2 border-primary/30 shadow-lg">
+            <div className={`col-span-1 lg:col-span-7 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}>
+              <div className="flex justify-start mb-4">
+                <Badge
+                  variant="outline"
+                  className="text-sm sm:text-lg font-semibold py-2 px-6 bg-gradient-to-r from-background via-muted/50 to-background border-2 border-primary/30 shadow-lg"
+                >
                   <Zap className="w-5 h-5 mr-3 text-primary animate-pulse" />
                   {user.title}
                 </Badge>
               </div>
 
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground font-serif leading-tight mb-4">
+                Kaushal&nbsp;
+                <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                  Krishna
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-6">
+                {user.tagline}
+              </p>
 
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-7xl font-bold text-foreground font-serif leading-tight">
-                  Kaushal&nbsp;
-                  <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                    Krishna
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link href="/projects">
+                  <Button size="lg" className="group font-semibold w-full sm:w-auto px-6 py-3 text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/20">
+                    View My Work
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg" className="group font-semibold w-full sm:w-auto px-6 py-3 text-lg bg-transparent hover:scale-105 transition-all duration-300">
+                    Get In Touch
+                    <Mail className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Availability */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center text-sm text-muted-foreground pt-4 gap-2 sm:gap-6">
+                <div className="flex items-center">
+                  <span className="relative flex h-3 w-3 mr-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
-                </h1>
-
-                <p className="text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-                  {user.tagline}
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Link href="/projects">
-                    <Button size="lg" className="group font-semibold w-full sm:w-auto px-8 py-4 text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/20">
-                      View My Work
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" size="lg" className="group font-semibold w-full sm:w-auto px-8 py-4 text-lg bg-transparent hover:scale-105 transition-all duration-300">
-                      Get In Touch
-                      <Mail className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
+                  Available for new projects
                 </div>
-
-                {/* NEW: Availability Status */}
-                <div className="flex items-center text-sm text-muted-foreground pt-4">
-                  <div className="flex items-center mr-6">
-                    <span className="relative flex h-3 w-3 mr-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                    </span>
-                    Available for new projects
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' })} IST
-                  </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
+                  {new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' })} IST
                 </div>
               </div>
             </div>
 
-            {/* Right Side - Avatar and Stats */}
-            <div className={`lg:col-span-5 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+            {/* Right Side - Avatar & Stats */}
+            <div className={`col-span-1 lg:col-span-5 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
               <div className="flex flex-col items-center relative gap-6">
-                {/* Avatar */}
                 <div className="text-center mb-8">
                   <div className="relative group">
-                    <Avatar className="w-80 h-80 mx-auto ring-4 ring-primary/20 shadow-2xl transition-all duration-500 group-hover:ring-primary/40 group-hover:scale-105">
+                    <Avatar className="w-48 sm:w-64 md:w-72 lg:w-80 h-48 sm:h-64 md:h-72 lg:h-80 mx-auto ring-4 ring-primary/20 shadow-2xl transition-all duration-500 group-hover:ring-primary/40 group-hover:scale-105">
                       <AvatarImage src="https://avatars.githubusercontent.com/u/132030841?s=400&v=4" alt="Kaushal Krishna" />
-                      <AvatarFallback className="text-6xl font-bold bg-gradient-to-r from-primary to-accent text-white">
+                      <AvatarFallback className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-accent text-white">
                         KK
                       </AvatarFallback>
                     </Avatar>
-                    <div className="absolute bottom-5 right-5 w-12 h-12 bg-green-500 rounded-full border-6 border-background flex items-center justify-center shadow-lg">
-                      <div className="w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="absolute bottom-5 right-5 w-10 sm:w-12 h-10 sm:h-12 bg-green-500 rounded-full border-4 sm:border-6 border-background flex items-center justify-center shadow-lg">
+                      <div className="w-4 sm:w-6 h-4 sm:h-6 bg-green-400 rounded-full animate-pulse"></div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-6 pt-4">
-                  <div className="flex gap-3">
-                    {user.socialLinks.map((link) => (
-                      <Button
-                        key={link.name}
-                        variant="ghost"
-                        size="icon"
-                        asChild
-                        className={`hover:scale-110 transition-all p-3 ${link.color}`}
-                      >
-                        <Link href={link.href} target="_blank" rel="noopener noreferrer">
-                          {link.icon}
-                        </Link>
-                      </Button>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-4">
+                  {user.socialLinks.map((link) => (
+                    <Button
+                      key={link.name}
+                      variant="ghost"
+                      size="icon"
+                      asChild
+                      className={`hover:scale-110 transition-all p-3 ${link.color}`}
+                    >
+                      <Link href={link.href} target="_blank" rel="noopener noreferrer">
+                        {link.icon}
+                      </Link>
+                    </Button>
+                  ))}
                   {user.email && (
-                    <Button variant="ghost" size="icon" className="hover:text-zinc-900 hover:scale-110 transition-all p-3" asChild><Link href={`mailto:${user.email}`}><Mail className="h-6 w-6" /></Link></Button>
+                    <Button variant="ghost" size="icon" className="hover:text-zinc-900 hover:scale-110 transition-all p-3" asChild>
+                      <Link href={`mailto:${user.email}`}><Mail className="h-6 w-6" /></Link>
+                    </Button>
                   )}
-                  <Button variant="outline" className="ml-4 hover:scale-105 transition-all duration-300" onClick={() => downloadResume(user.resumeLink)}>
+                  <Button variant="outline" className="ml-0 sm:ml-4 hover:scale-105 transition-all duration-300 w-full sm:w-auto" onClick={() => downloadResume(user.resumeLink)}>
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </Button>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
 
       {/* Enhanced About Section - Refined Layout */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-muted/20 via-background to-primary/5 relative z-20">

@@ -1,4 +1,7 @@
+"use client"
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
   Mail,
@@ -9,10 +12,13 @@ import {
   Calendar,
   TrendingUp,
 } from 'lucide-react';
-
 import { user } from "@/data/user"
 
 const FooterCta = () => {
+
+  const pathname = usePathname()
+  if (pathname === "/contact") return null
+
   return (
     <section className="py-24 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
