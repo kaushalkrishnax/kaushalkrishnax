@@ -34,13 +34,12 @@ import Link from "next/link"
 import { user } from "@/data/user";
 
 export default function About() {
-  document.title = `${user.name} | About`;
-
   const [activeSkillCategory, setActiveSkillCategory] = useState("Frontend")
   const [isVisible, setIsVisible] = useState(false)
   const [activeTab, setActiveTab] = useState("skills")
 
   useEffect(() => {
+    document.title = `${user.name} | About`;
     setIsVisible(true)
   }, [])
 

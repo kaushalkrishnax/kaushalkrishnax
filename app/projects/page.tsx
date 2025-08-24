@@ -8,8 +8,6 @@ import { user } from "@/data/user"
 import { projectsData } from "@/data/projects"
 
 export default function Projects() {
-  document.title = `${user.name} | Projects`;
-
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const [selectedStatus, setSelectedStatus] = useState<string>("All")
   const [searchTerm, setSearchTerm] = useState<string>("")
@@ -17,6 +15,7 @@ export default function Projects() {
   const [favorites, setFavorites] = useState<Set<string>>(new Set())
 
   useEffect(() => {
+    document.title = `${user.name} | Projects`;
     setIsVisible(true)
   }, [])
 

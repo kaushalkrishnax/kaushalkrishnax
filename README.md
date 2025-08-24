@@ -3,8 +3,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00FF88&vCenter=true&width=450&lines=Hey+there!+I'm+Kaushal+Krishna;Full-Stack+Wizard;AI+%26+Tech+Trailblazer;Coding+the+Future+with+Passion" alt="Typing SVG" />
 </p>
 
----
-
 ## 🌌 About Me
 
 <img align="right" alt="Coding" width="400" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif">
@@ -25,6 +23,9 @@ const kaushal = {
     funFact: "I debug with console.log and I'm not ashamed! 😄"
 };
 ```
+---
+
+### Portfolio: [kaushalkrishnax.pages.dev](https://kaushalkrishnax.pages.dev)
 ---
 
 ### 📊 My GitHub Cosmos

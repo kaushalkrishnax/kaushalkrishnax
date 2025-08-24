@@ -50,8 +50,6 @@ import {
 import { user } from "@/data/user";
 
 export default function Contact() {
-  document.title = `${user.name} | Contact`;
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -68,6 +66,7 @@ export default function Contact() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    document.title = `${user.name} | Contact`;
     setIsVisible(true)
   }, [])
 

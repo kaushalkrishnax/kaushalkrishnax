@@ -12,15 +12,14 @@ import { user } from "@/data/user"
 import { projectsData } from "@/data/projects"
 
 export default function Project({ params }: { params: { slug: string } }) {
-  
+
   const resolvedParams = React.use(params as any);
   const project = projectsData[resolvedParams?.slug as keyof typeof projectsData];
   const [copied, setCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  
-  document.title = `${user.name} | ${project.title}`;
 
   useEffect(() => {
+    document.title = `${user.name} | ${project.title}`;
     setIsVisible(true);
   }, []);
 
